@@ -1,0 +1,79 @@
+/* Ex 1 */
+.violet {
+  background-color: violet;
+}
+
+.greenyellow {
+  background-color: greenyellow;
+}
+
+.gray {
+  background-color: gray;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.red {
+  background-color: red;
+}
+
+.house {
+  width: 160px;
+  height: 140px;
+  position: relative;
+  border-radius: 4px;
+  margin-top: 140px;
+}
+
+.house::before {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: -40%;
+  left: 6.5%;
+  background-color: inherit;
+  transform: rotate(45deg);
+  border-radius: 2px;
+}
+
+.house::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 80px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn-change {
+  width: 50px;
+  height: 30px;
+  margin-left: 6px;
+}
