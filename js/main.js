@@ -1,4 +1,4 @@
-// Ex1: Change color house
+// Ex 1: Change color house
 const colorList = [
   'violet',
   'greenyellow',
@@ -29,31 +29,19 @@ const changeColor = (color) => {
   document.querySelector('#house').className = `house ${color}`
 }
 
-// Ex2: Calc scores
-
-// let scoreVan = document.querySelector('#inputVan').value
-// let scoreSu = document.querySelector('#inputSu').value
-// let scoreDia = document.querySelector('#inputDia').value
-
-// let scoreList = [
-//   scoreToan,
-//   scoreLy,
-//   scoreHoa,
-//   scoreVan,
-//   scoreSu,
-//   scoreDia
-// ]
-
-let calcScore = (d1, d2, d3) => {
+// Ex 2: Calc scores
+let calcScore = (...scoreList) => {
+  let total = 0;
+  let count = 0;
   let dtb = 0
-  if (d1 == '' || d2 == '' || d3 == '') {
-    alert('Bạn chưa nhập điểm')
-    return dtb = ''
-  } else if (isNaN(d1) || isNaN(d2) || isNaN(d3)) {
-    alert('Bạn phải nhập số')
-    return dtb = ''
-  }
-  return dtb = ((d1 + d2 + d3) / 3).toFixed(2)
+
+  scoreList.map((score) => {
+    total += score;
+    count++;
+    dtb = (total / count).toFixed(2);
+  })
+
+  return dtb;
 }
 
 let calcScore1 = () => {
@@ -73,3 +61,5 @@ let calcScore2 = () => {
   document.querySelector('#result-score-2').innerHTML = calcScore(scoreVan, scoreSu, scoreDia)
 }
 document.querySelector('#calc-score2').onclick = calcScore2
+
+// Ex 3: 
