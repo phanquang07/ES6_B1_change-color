@@ -46,7 +46,10 @@ const changeColor = (color) => {
 
 let calcScore = (d1, d2, d3) => {
   let dtb = 0
-  if (isNaN(d1) || isNaN(d2) || isNaN(d3)) {
+  if (d1 == '' || d2 == '' || d3 == '') {
+    alert('Bạn chưa nhập điểm')
+    return dtb = ''
+  } else if (isNaN(d1) || isNaN(d2) || isNaN(d3)) {
     alert('Bạn phải nhập số')
     return dtb = ''
   }
